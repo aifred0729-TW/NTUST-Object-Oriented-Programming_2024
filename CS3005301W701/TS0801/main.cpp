@@ -17,6 +17,14 @@ int main()
 	r = q;             //test operator=
 	r = c;
 
+	double test1[] = { 12, 34 };
+	Polynomial t1(test1, 2);
+	t1[0] = 10;
+	t1[1] = 5;
+	Polynomial t3 = t1;
+
+	cout << evaluate(t3, -10) << endl;
+
 	cout << "Polynomial q " << endl;
 	for (int i = 0; i < 3; i++)
 		cout << "term with degree " << i << " has coefficient " << q[i] << endl;
@@ -24,11 +32,14 @@ int main()
 	cout << "Polynomial c " << endl;
 	for (int i = 0; i < 4; i++)
 		cout << "term with degree " << i << " has coefficient " << c[i] << endl;
+	
 
 	cout << "value of q(2) is " << evaluate(q, 2) << endl;
 	cout << "value of p(2) is " << evaluate(p, 2) << endl;
 	cout << "value of r(2) is " << evaluate(r, 2) << endl;
 	cout << "value of c(2) is " << evaluate(c, 2) << endl;
+
+	cout << evaluate(c * 2, 1);
 
 	r = q + c;
 	cout << "value of (q + c)(2) is " << evaluate(r, 2) << endl;
