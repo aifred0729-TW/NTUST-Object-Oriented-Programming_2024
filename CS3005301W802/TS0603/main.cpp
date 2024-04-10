@@ -8,7 +8,7 @@ int main() {
 	Game.SetFileName("number.txt");
 	Game.LoadNumberList();
 	Game.PrintAllValid();
-
+	
 	Game.Reset();
 	cout << "\n";
 	Game.SetInput(2345);
