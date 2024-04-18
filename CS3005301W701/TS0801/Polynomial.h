@@ -4,7 +4,7 @@
 #include <vector>
 
 class Polynomial {
-public:
+    public:
     int rowSize = 0;
 
     std::vector<double> row;
@@ -26,26 +26,26 @@ public:
     }
 
     Polynomial(const Polynomial& poly) {
-        row = poly.row;
+        row     = poly.row;
         rowSize = poly.rowSize;
     }
 
-    int mySize();
+    int           mySize();
     friend double evaluate(const Polynomial poly, const double var);
 
     double& operator[](const int index);
 
     Polynomial operator=(const Polynomial poly);
 
-    Polynomial operator+(const Polynomial poly);
-    Polynomial operator+(const double num);
+    Polynomial        operator+(const Polynomial poly);
+    Polynomial        operator+(const double num);
     friend Polynomial operator+(const double num, const Polynomial poly);
 
-    Polynomial operator-(const Polynomial poly);
-    Polynomial operator-(const double num);
+    Polynomial        operator-(const Polynomial poly);
+    Polynomial        operator-(const double num);
     friend Polynomial operator-(const double num, const Polynomial poly);
 
-    Polynomial operator*(const Polynomial poly);
-    Polynomial operator*(const double num);
+    Polynomial        operator*(const Polynomial poly);
+    Polynomial        operator*(const double num);
     friend Polynomial operator*(const double num, const Polynomial poly);
 };
